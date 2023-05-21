@@ -33,7 +33,7 @@ mongoose.connect(process.env.DATABASECLOUD,{
     app.get("/",(req,res)=>{
     res.send("bonjour");
     });
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT|| 3000|| 3001, () => {
     console.log(`Server is listening on port ${process.env.PORT}`);
  });
     module.exports = app;
